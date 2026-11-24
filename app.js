@@ -4,7 +4,7 @@
    (ver CONFIGURAR-GOOGLE-SHEETS.md). Mientras esté vacía,
    el formulario funciona en "modo prueba" y no guarda nada.
    ========================================================= */
-const SHEETS_URL = '';
+const SHEETS_URL = 'https://script.google.com/macros/s/AKfycbzu6POC1umdGJ4yyuJw4tjcTfOmrUztpRpaOAfNBEIg4FlhRQAcyyiBT1cM-cnv3JPP/exec';
 const FECHA_EVENTO = new Date('2026-11-29T15:00:00-06:00'); // 3:00 p. m., hora del centro de México
 
 (() => {

@@ -1,8 +1,9 @@
 /**
  * Receptor de confirmaciones · Cumpleaños de Claudia
- * Se pega en Extensiones > Apps Script de la hoja de Google.
+ * Proyecto de Apps Script que escribe en la hoja indicada en ID_LIBRO.
  * Guarda cada confirmación en la pestaña "Confirmaciones".
  */
+const ID_LIBRO = '1feCDSg0dQoKRH4dtYmCxj5dg1N1hAQXrEIS8Y-CQQlc'; // hoja "Cumpleaños Claudia - Confirmaciones"
 const HOJA = 'Confirmaciones';
 const ENCABEZADOS = ['Fecha', 'Nombre', '¿Asiste?', 'Personas', 'WhatsApp', 'Mensaje para Claudia'];
 
@@ -34,7 +35,7 @@ function doGet() {
 }
 
 function obtenerHoja() {
-  const libro = SpreadsheetApp.getActiveSpreadsheet();
+  const libro = SpreadsheetApp.openById(ID_LIBRO);
   let hoja = libro.getSheetByName(HOJA);
   if (!hoja) hoja = libro.insertSheet(HOJA);
   if (hoja.getLastRow() === 0) {
