@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Claudia · 45 años de vida, amor y familia</title>
+<meta name="description" content="Con mucho cariño te invitamos a celebrar el cumpleaños de Claudia. Domingo 29 de noviembre de 2026, Salón de Eventos Cacali.">
+<meta name="theme-color" content="#4a1424">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Claudia · 45 años de vida, amor y familia">
+<meta property="og:description" content="Domingo 29 de noviembre · a partir de las 3:00 p. m. · Salón de Eventos Cacali. Te esperamos con mucho cariño.">
+<meta property="og:url" content="https://claudiaunzuetajimenez.github.io/">
+<meta property="og:image" content="https://claudiaunzuetajimenez.github.io/og-claudia.jpg">
+<meta name="twitter:image" content="https://claudiaunzuetajimenez.github.io/og-claudia.jpg">
+<link rel="canonical" href="https://claudiaunzuetajimenez.github.io/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css?v=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B9%3C/text%3E%3C/svg%3E">
+</head>
+<body class="bloqueado">
+
+<!-- Rosa reutilizable -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="rosa" viewBox="0 0 100 100">
+      <path d="M50 92c-2-14-3-24-1-34" stroke="#5f7d4e" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <path d="M49 74c-10-2-18-8-20-16 9 0 17 5 20 16z" fill="#6f8f5a"/>
+      <path d="M50 70c9-3 15-10 16-18-8 1-15 7-16 18z" fill="#6f8f5a"/>
+      <circle cx="50" cy="34" r="24" fill="#b4304f"/>
+      <path d="M27 36c0-15 10-24 23-24s23 9 23 24c-6-8-14-11-23-11s-17 3-23 11z" fill="#d24b6a"/>
+      <path d="M33 40c3-10 9-15 17-15s14 5 17 15c-5-5-11-7-17-7s-12 2-17 7z" fill="#8f1f3a"/>
+      <path d="M38 34c2-7 6-10 12-10s10 3 12 10c-4-3-8-4-12-4s-8 1-12 4z" fill="#e06b86"/>
+      <path d="M44 31c1-3 3-5 6-5s5 2 6 5c-2-1-4-2-6-2s-4 1-6 2z" fill="#7a1830"/>
+      <path d="M27 36c2 14 11 22 23 22s21-8 23-22c-4 9-12 15-23 15s-19-6-23-15z" fill="#9c2342"/>
+    </symbol>
+    <symbol id="petalo" viewBox="0 0 40 40">
+      <path d="M20 2C30 8 38 18 34 28 30 36 22 39 20 38 18 39 10 36 6 28 2 18 10 8 20 2z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ===== Sobre de entrada ===== -->
+<div id="sobre" class="sobre" role="dialog" aria-modal="true" aria-labelledby="sobre-titulo">
+  <div class="sobre-fondo"></div>
+  <div class="sobre-contenido">
+    <p class="sobre-pre">Tienes una invitación muy especial</p>
+    <div class="carta" id="carta">
+      <div class="carta-solapa"></div>
+      <div class="carta-cuerpo">
+        <h1 id="sobre-titulo" class="carta-nombre">Claudia</h1>
+        <span class="carta-num">45 años</span>
+      </div>
+      <button id="abrir" class="sello" aria-label="Abrir la invitación">
+        <svg viewBox="0 0 100 100" aria-hidden="true"><use href="#rosa"/></svg>
+      </button>
+    </div>
+    <p class="sobre-indica">Toca la rosa para abrir <span aria-hidden="true">♪</span></p>
+    <p class="sobre-nota">Sube el volumen: la invitación tiene música</p>
+  </div>
+</div>
+
+<div id="petalos" class="petalos" aria-hidden="true"></div>
+
+<button id="musica" class="btn-musica" aria-label="Pausar música" aria-pressed="true" hidden>
+  <span class="ecualizador" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  <span class="musica-texto">Gracias a la vida</span>
+</button>
+<audio id="audio" src="musica.mp3" preload="auto" loop></audio>
+
+<main>
+
+  <!-- ===== Portada ===== -->
+  <header class="portada">
+    <div class="portada-foto" role="img" aria-label="Claudia en lo alto de unas escaleras de piedra, con sombrero y cielo azul"></div>
+    <div class="portada-velo"></div>
+    <div class="portada-texto">
+      <p class="eyebrow aparecer">Celebremos juntos la vida de</p>
+      <h2 class="nombre-grande aparecer">Claudia</h2>
+      <div class="cuarenta aparecer">
+        <span class="linea"></span><span class="num">45</span><span class="linea"></span>
+      </div>
+      <p class="lema aparecer">años de vida, de amor y de familia</p>
+      <p class="fecha-portada aparecer">Domingo · 29 · Noviembre · 2026</p>
+      <a href="#historia" class="bajar" aria-label="Ver más">
+        <span></span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ===== Intro ===== -->
+  <section class="intro seccion">
+    <svg class="rosa-deco aparecer" viewBox="0 0 100 100" aria-hidden="true"><use href="#rosa"/></svg>
+    <h3 class="titulo-script aparecer">Gracias a la vida</h3>
+    <p class="texto-grande aparecer">
+      Hay personas que no solo cumplen años: <em>los llenan de vida</em>.
+      Claudia es de esas. Hija, hermana, esposa y mamá; corazón grande,
+      sonrisa franca y abrazo que siempre llega a tiempo.
+    </p>
+    <p class="texto aparecer">
+      Este 29 de noviembre queremos rodearla de la gente que más quiere
+      y agradecer, juntos, todo lo que nos ha dado.
+    </p>
+  </section>
+
+  <!-- ===== Raíces ===== -->
+  <section class="raices seccion">
+    <div class="raices-grid">
+      <figure class="marco-antiguo aparecer">
+        <img src="fotos/01-tres-generaciones.webp" alt="Claudia junto a su abuelita y otra mujer de la familia, tomadas de la mano" loading="lazy" width="574" height="574">
+        <figcaption>Tres generaciones</figcaption>
+      </figure>
+      <div class="raices-texto aparecer">
+        <p class="eyebrow oscuro">Sus raíces</p>
+        <h3 class="titulo">Su segunda mamá</h3>
+        <p class="texto">
+          Su abuelita la crió con amor infinito y Claudia la quiso con todo el corazón.
+          De ella aprendió a cuidar, a dar sin medida y a sostener a los suyos.
+        </p>
+        <p class="texto cursiva">
+          Su cariño sigue floreciendo en cada rosa de esta historia,
+          y estará con nosotros en esta mesa.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Carrusel ===== -->
+  <section id="historia" class="historia seccion">
+    <p class="eyebrow">Momentos que nos hacen quienes somos</p>
+    <h3 class="titulo-script claro">Su historia</h3>
+
+    <div class="carrusel" id="carrusel" aria-roledescription="carrusel" aria-label="Fotos de la historia de Claudia">
+      <div class="carrusel-pista" id="pista">
+        <figure class="diapo" data-i="0"><img src="fotos/01-tres-generaciones.webp" alt="Claudia con su abuelita, su mamá de crianza" loading="lazy"><figcaption><b>Tres generaciones</b><span>Con su abuelita, su segunda mamá. De ella aprendió a querer sin medida.</span></figcaption></figure>
+        <figure class="diapo" data-i="1"><img src="fotos/02-romanticos.webp" alt="Adrián y Claudia abrazados en una fiesta" loading="lazy"><figcaption><b>Enamorados</b><span>Adrián y Claudia: cualquier fiesta es mejor si están juntos.</span></figcaption></figure>
+        <figure class="diapo" data-i="2"><img src="fotos/03-de-paseo.webp" alt="Claudia y Adrián de paseo en un mirador entre árboles" loading="lazy"><figcaption><b>Compañeros de camino</b><span>De paseo por la vida, cuando Matteo todavía era un sueño por cumplir.</span></figcaption></figure>
+        <figure class="diapo" data-i="3"><img src="fotos/04-emi-y-matteo.webp" alt="Emiliano carga a Matteo y los dos sacan la lengua" loading="lazy"><figcaption><b>Hermanos</b><span>Emiliano y Matteito: complicidad, travesuras y lengüitas de fuera.</span></figcaption></figure>
+        <figure class="diapo" data-i="4"><img src="fotos/05-alberca.webp" alt="La familia Sánchez Unzueta sonriendo dentro de una alberca" loading="lazy"><figcaption><b>Familia de patitos</b><span>Los Sánchez Unzueta en el agua: mojados, felices y juntos.</span></figcaption></figure>
+        <figure class="diapo" data-i="5"><img src="fotos/06-boda.webp" alt="Claudia y Adrián el día de su boda con Emiliano al frente" loading="lazy"><figcaption><b>El día del sí</b><span>Claudia y Adrián unieron sus vidas, con Emiliano en medio del abrazo.</span></figcaption></figure>
+        <figure class="diapo" data-i="6"><img src="fotos/07-familia.webp" alt="Adrián, Claudia con Matteo recién nacido en brazos, y Emiliano" loading="lazy"><figcaption><b>Nuestro regalo de Dios</b><span>Después de mucho esperar, llegó Matteo a completar la familia.</span></figcaption></figure>
+        <figure class="diapo"><img data-opcional src="fotos/10-navidad-2025.webp" alt="Adrián le da un beso en la mejilla a Claudia en Navidad" loading="lazy"><figcaption><b>Navidad 2025</b><span>Los años pasan y los besos siguen igual de sinceros.</span></figcaption></figure>
+        <figure class="diapo"><img data-opcional src="fotos/11-anio-nuevo-2026.webp" alt="Claudia, Adrián y Matteo juntos en Año Nuevo" loading="lazy" style="object-position:center 30%"><figcaption><b>Año Nuevo 2026</b><span>Claudia, Adrián y Matteo estrenando año, tomados de la mano.</span></figcaption></figure>
+        <figure class="diapo"><img data-opcional src="fotos/12-matteo-en-pose.webp" alt="Matteo con lentes y playera roja, sonriendo y posando para la foto" loading="lazy" style="object-position:center 20%"><figcaption><b>Matteito en pose</b><span>El regalo de Dios ya tiene estilo propio… y mucha actitud.</span></figcaption></figure>
+        <figure class="diapo" data-i="7"><img src="fotos/08-hermanos.webp" alt="Claudia rodeada de su familia en un jardín" loading="lazy"><figcaption><b>Los suyos</b><span>Rodeada de su familia, la que la ha visto crecer y florecer.</span></figcaption></figure>
+        <figure class="diapo" data-i="8"><img src="fotos/09-clau.webp" alt="Claudia posando con sombrero en unas escaleras de piedra" loading="lazy"><figcaption><b>Simplemente Clau</b><span>Alegre, fuerte y con la frente en alto. Así la queremos.</span></figcaption></figure>
+      </div>
+      <button class="flecha izq" id="ant" aria-label="Foto anterior">‹</button>
+      <button class="flecha der" id="sig" aria-label="Foto siguiente">›</button>
+    </div>
+    <div class="puntos" id="puntos" role="tablist" aria-label="Elegir foto"></div>
+  </section>
+
+  <!-- ===== Familia ===== -->
+  <section class="familia seccion">
+    <p class="eyebrow oscuro">Su tesoro más grande</p>
+    <h3 class="titulo">La familia Sánchez Unzueta</h3>
+    <div class="familia-grid">
+      <article class="miembro aparecer">
+        <div class="retrato"><img src="fotos/p-adrian.webp" alt="Adrián" loading="lazy" width="360" height="360"></div>
+        <h4>Adrián</h4>
+        <p class="rol">Su esposo</p>
+        <p>Compañero de vida y esposo ejemplar. La mano que nunca la suelta.</p>
+      </article>
+      <article class="miembro aparecer">
+        <div class="retrato"><img src="fotos/p-emiliano.webp" alt="Emiliano" loading="lazy" width="360" height="360"></div>
+        <h4>Emiliano</h4>
+        <p class="rol">4 de julio de 2003</p>
+        <p>Su primer gran amor. Lo vio crecer y hoy es todo un hombre que la llena de orgullo.</p>
+      </article>
+      <article class="miembro aparecer">
+        <div class="retrato"><img src="fotos/p-matteo.webp" alt="Matteo de bebé" loading="lazy" width="360" height="360"></div>
+        <h4>Matteo</h4>
+        <p class="rol">1 de junio de 2020</p>
+        <p>Su pequeño, el que tanto pidieron al cielo.</p>
+      </article>
+    </div>
+
+    <blockquote class="matteo-cita aparecer">
+      <span class="comillas" aria-hidden="true">“</span>
+      <p><strong>Matteo</strong> significa <em>“Regalo de Dios”</em>.</p>
+      <p class="sub">No fue fácil que llegara, pero lo lograron. Y cada día confirma que su nombre le queda perfecto.</p>
+    </blockquote>
+  </section>
+
+  <!-- ===== Cuenta regresiva ===== -->
+  <section class="cuenta seccion">
+    <p class="eyebrow">Ya casi</p>
+    <h3 class="titulo-script claro">Faltan</h3>
+    <div class="reloj" id="reloj" aria-live="off">
+      <div><span id="d">0</span><small>días</small></div>
+      <div><span id="h">0</span><small>horas</small></div>
+      <div><span id="m">0</span><small>minutos</small></div>
+      <div><span id="s">0</span><small>segundos</small></div>
+    </div>
+    <p class="cuenta-fin" id="cuenta-fin" hidden>¡Hoy es el gran día! Feliz cumpleaños, Claudia.</p>
+  </section>
+
+  <!-- ===== Dónde y cuándo ===== -->
+  <section id="detalles" class="detalles seccion">
+    <p class="eyebrow oscuro">Te esperamos</p>
+    <h3 class="titulo">Dónde y cuándo</h3>
+    <div class="detalles-grid">
+      <div class="tarjeta aparecer">
+        <div class="icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+        </div>
+        <h4>Domingo 29 de noviembre</h4>
+        <p>2026</p>
+        <a class="btn btn-borde" id="calendario" target="_blank" rel="noopener">Agregar a mi calendario</a>
+      </div>
+      <div class="tarjeta aparecer">
+        <div class="icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        </div>
+        <h4>Comida</h4>
+        <p>A partir de las 3:00 p. m.</p>
+        <p class="nota">Ven sin prisa: la tarde es para compartir.</p>
+      </div>
+      <div class="tarjeta aparecer">
+        <div class="icono" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <h4>Salón de Eventos Cacali</h4>
+        <p>Toca el botón y te lleva directo</p>
+        <a class="btn" href="https://maps.app.goo.gl/XoTdakJqyJoJcSpt9" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+    </div>
+    <div class="mapa aparecer">
+      <iframe title="Mapa del Salón de Eventos Cacali" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=18.665728,-99.204395&z=16&output=embed"></iframe>
+    </div>
+    <p class="vestimenta aparecer"><svg class="mini-rosa" viewBox="0 0 100 100" aria-hidden="true"><use href="#rosa"/></svg>
+      No hay código de vestimenta: ven cómodo y con el corazón contento.</p>
+  </section>
+
+  <!-- ===== Confirmación ===== -->
+  <section id="confirmar" class="confirmar seccion">
+    <p class="eyebrow">Nos encantará verte</p>
+    <h3 class="titulo-script claro">Confirma tu asistencia</h3>
+    <p class="texto claro-t">Es una comida íntima, con la gente más cercana. Ayúdanos a preparar tu lugar con mucho cariño.</p>
+
+    <form id="form" class="form" novalidate>
+      <label class="campo">
+        <span>Tu nombre o el de tu familia</span>
+        <input name="nombre" id="f-nombre" autocomplete="name" maxlength="80" required placeholder="Ej. Familia Pérez López">
+      </label>
+
+      <fieldset class="campo opciones">
+        <legend>¿Nos acompañas?</legend>
+        <label class="opcion"><input type="radio" name="asiste" value="si" checked><span>¡Sí, ahí estaré!</span></label>
+        <label class="opcion"><input type="radio" name="asiste" value="no"><span>No podré, pero la abrazo de lejos</span></label>
+      </fieldset>
+
+      <label class="campo" id="campo-personas">
+        <span>¿Cuántas personas, contándote?</span>
+        <div class="contador">
+          <button type="button" id="menos" aria-label="Una persona menos">−</button>
+          <input name="personas" id="f-personas" type="number" inputmode="numeric" min="1" max="12" value="1">
+          <button type="button" id="mas" aria-label="Una persona más">+</button>
+        </div>
+      </label>
+
+      <label class="campo">
+        <span>Tu WhatsApp <small>(opcional)</small></span>
+        <input name="telefono" type="tel" autocomplete="tel" maxlength="20" placeholder="10 dígitos">
+      </label>
+
+      <label class="campo">
+        <span>Unas palabras para Claudia <small>(opcional, ella las leerá)</small></span>
+        <textarea name="mensaje" rows="3" maxlength="500" placeholder="Escríbele algo bonito…"></textarea>
+      </label>
+
+      <p class="form-error" id="form-error" role="alert" hidden></p>
+      <button class="btn btn-grande" id="enviar" type="submit">Enviar confirmación</button>
+    </form>
+
+    <div class="gracias" id="gracias" hidden tabindex="-1">
+      <svg class="rosa-deco" viewBox="0 0 100 100" aria-hidden="true"><use href="#rosa"/></svg>
+      <h4 id="gracias-titulo">¡Gracias por confirmar!</h4>
+      <p id="gracias-texto">Tu lugar ya está apartado con cariño.</p>
+      <button class="btn btn-borde claro-b" id="otra" type="button">Enviar otra confirmación</button>
+    </div>
+  </section>
+
+  <!-- ===== Cierre ===== -->
+  <footer class="cierre seccion">
+    <svg class="rosa-deco grande aparecer" viewBox="0 0 100 100" aria-hidden="true"><use href="#rosa"/></svg>
+    <p class="texto aparecer">Con mucho cariño y especial amor los invita</p>
+    <p class="firma aparecer">Familia Sánchez Unzueta</p>
+    <div class="firma-nombres aparecer">Adrián · Emiliano · Matteo</div>
+    <p class="feliz aparecer">¡Feliz cumpleaños, Clau!</p>
+  </footer>
+</main>
+
+<script src="app.js?v=1"></script>
+</body>
+</html>
