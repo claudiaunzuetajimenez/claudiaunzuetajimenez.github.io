@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<title>Invitados · Cumpleaños de Claudia</title>
+<meta name="theme-color" content="#4a1424">
+<meta property="og:title" content="Invitados · Cumpleaños de Claudia">
+<meta property="og:description" content="Panel privado de confirmaciones. Requiere clave.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="invitados.css?v=1">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%B9%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="cabecera">
+  <p class="eyebrow">Cumpleaños de Claudia · 29 de noviembre de 2026</p>
+  <h1>Lista de invitados</h1>
+  <p class="sub">Panel privado · Familia Sánchez Unzueta</p>
+</header>
+
+<!-- Acceso -->
+<section id="acceso" class="tarjeta acceso">
+  <form id="form-clave" autocomplete="off">
+    <label for="clave">Clave de acceso</label>
+    <div class="fila-clave">
+      <input id="clave" type="password" autocomplete="current-password" required placeholder="Escribe la clave">
+      <button type="button" id="ver-clave" class="btn-icono" aria-label="Mostrar la clave" aria-pressed="false">👁</button>
+    </div>
+    <p id="error-clave" class="aviso error" role="alert" hidden></p>
+    <button id="entrar" class="btn" type="submit">Entrar</button>
+  </form>
+</section>
+
+<!-- Panel -->
+<main id="panel" hidden>
+  <section class="totales" aria-label="Resumen">
+    <div class="total destacado"><span id="t-personas">0</span><small>personas asistirán</small></div>
+    <div class="total"><span id="t-si">0</span><small>confirmaron que sí</small></div>
+    <div class="total"><span id="t-no">0</span><small>no podrán ir</small></div>
+    <div class="total"><span id="t-mensajes">0</span><small>mensajes para Clau</small></div>
+  </section>
+
+  <section class="herramientas tarjeta">
+    <div class="filtros" role="radiogroup" aria-label="Mostrar">
+      <button type="button" class="chip" data-filtro="todos" aria-pressed="true">Todos</button>
+      <button type="button" class="chip" data-filtro="si" aria-pressed="false">Asistirán</button>
+      <button type="button" class="chip" data-filtro="no" aria-pressed="false">No asistirán</button>
+      <button type="button" class="chip" data-filtro="mensajes" aria-pressed="false">Con mensaje</button>
+    </div>
+    <input id="buscar" type="search" placeholder="Buscar por nombre…" aria-label="Buscar por nombre">
+    <div class="acciones">
+      <button type="button" id="actualizar" class="btn btn-borde">Actualizar</button>
+      <button type="button" id="pdf" class="btn">Descargar PDF</button>
+      <button type="button" id="salir" class="btn-texto">Salir</button>
+    </div>
+    <label class="check"><input type="checkbox" id="pdf-mensajes" checked> Incluir los mensajes para Claudia en el PDF</label>
+    <p id="estado" class="aviso" aria-live="polite"></p>
+  </section>
+
+  <section id="lista" class="lista" aria-live="polite"></section>
+</main>
+
+<script src="vendor/jspdf-4.2.1.umd.min.js" defer></script>
+<script src="vendor/jspdf-autotable-5.0.8.min.js" defer></script>
+<script src="vendor/pdf-fonts.js" defer></script>
+<script src="invitados.js?v=1" defer></script>
+</body>
+</html>
